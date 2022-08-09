@@ -44,7 +44,7 @@ def collecting_data(arg):
 	get_info(ip = arg)	
 	print(Style.RESET_ALL + '')
 	print(Back.LIGHTGREEN_EX + Fore.BLACK + f'[+] Data collected successfully!')
-	print(Style.RESET_ALL + '                                                                                                                                                                      ')
+	print(Style.RESET_ALL + '')
 	print_info()
 
 
@@ -72,7 +72,7 @@ def check_network_conection(ip_addr):
 		sys.stdout.write(Back.LIGHTGREEN_EX + Fore.BLACK + f'\rStatus: {stat}.')
 		print(Style.RESET_ALL + '')
 		print(Back.LIGHTGREEN_EX + Fore.BLACK + f'[+] Connection {stat}!')
-		print(Style.RESET_ALL + '                                                                                                                                                                      ')
+		print(Style.RESET_ALL + '')
 		collecting_data(arg = ip_addr)
 
 
