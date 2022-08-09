@@ -1,7 +1,5 @@
 from colorama import Fore, Back, Style
-from pyfiglet import Figlet
 import requests
-import folium
 import time
 import sys
 
@@ -20,9 +18,6 @@ def get_info(ip):
 	'[Lat]': r.get('lat'),
 	'[Lon]': r.get('lon'),	
 	}
-
-	area = folium.Map(location=[r.get('lat'), r.get('lon')])
-	area.save(f'{r.get("query")}.html')
 
 
 def print_info():
@@ -91,10 +86,7 @@ def check_network_conection(ip_addr):
 
 
 def start():
-	preview = Figlet(font = 'slant')
-	print(preview.renderText('DNNBP TOOL'))
 	ip_addr_in = input("\nEnter IP-Address you want to scan: ")
-
 	check_network_conection(ip_addr = ip_addr_in) 
 
 def main():
